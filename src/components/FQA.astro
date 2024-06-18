@@ -1,0 +1,42 @@
+---
+const faqs = [
+  {
+    question: "¿Qué es SocialCloset?",
+    answer: "Social Closet es una plataforma que permite a los usuarios organizar su armario virtual, y conectarse con otros amantes de la moda.",
+  },
+  {
+    question: "¿Qué me permite hacer SocialCloset?",
+    answer: "Social Closet permite al usuario subir las prendas que tenga y almacenarlas en su armario virtual. También puede visualizar prendas de otros usuarios y guardarselas para una futura compra. Además, puede poner una reseña y ver qué prendas tienen mayor calificación.",
+  },
+  {
+    question: "¿Cuáles son los beneficios de usar Social Closet?",
+    answer: "Los usuarios de Social Closet se ahorrarían todo el tiempo que tardan en elegir conjunto. También harían mejores compras ya que saben perfectamente que es lo que necesitan y lo que no.",
+  },
+  {
+    question: "¿Habrá mejoras para organizar mejor mi armario virtual?",
+    answer: "Sí, por supuesto. Se está mejorando en etiquetar las prendas para poder dividir tu armario en compartimentos.",
+  },
+ 
+];
+---
+
+<div class="max-w-2xl mx-auto py-12">
+  <h2 class="text-3xl font-bold mb-6 text-center text-white">Preguntas Frecuentes</h2>
+  <div class="space-y-4">
+    {faqs.map((faq) => (
+      <details class="border border-gray-300 rounded-lg">
+        <summary class="w-full text-left p-4 cursor-pointer focus:outline-none">
+          <h3 class="text-lg font-semibold flex justify-between items-center text-white">
+            {faq.question}
+            <svg class="w-6 h-6 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </h3>
+        </summary>
+        <div class="p-4 text-whitesmoke">
+          {faq.answer}
+        </div>
+      </details>
+    ))}
+  </div>
+</div>
